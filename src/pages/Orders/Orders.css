@@ -1,0 +1,127 @@
+/* Page */
+.admin-orders {
+  flex: 1; /* 🔥 takes remaining space */
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-orders h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Container */
+.orders-container {
+  max-width: 1350px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.order-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-header h3 {
+  font-size: 18px;
+}
+
+/* Dropdown */
+.status-dropdown {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Status Colors */
+.status-processing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-out {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Items */
+.order-items {
+  margin-top: 12px;
+  border-top: 1px dashed #ddd;
+  padding-top: 10px;
+}
+
+.order-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.order-item img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+/* Address */
+.order-address {
+  margin-top: 10px;
+  background: #f9fbfd;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* Details */
+.order-details {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

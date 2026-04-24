@@ -1,0 +1,127 @@
+/* Page layout */
+.add {
+  flex: 1; /* 🔥 take remaining width beside sidebar */
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form Card */
+.add form {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Flex Column */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Image Upload */
+.add-img-upload {
+  align-items: center;
+}
+
+.add-img-upload img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-img-upload img:hover {
+  border-color: tomato;
+}
+
+/* Inputs */
+.add-product-name,
+.add-product-description {
+  width: 100%;
+}
+
+.add-product-name input,
+.add-product-description textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.add-product-name input:focus,
+.add-product-description textarea:focus {
+  outline: none;
+  border-color: tomato;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.3);
+}
+
+/* Category + Price */
+.add-category-price {
+  display: flex;
+  gap: 20px;
+}
+
+.add-category,
+.add-price {
+  flex: 1;
+}
+
+.add-category select,
+.add-price input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Button */
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, tomato, #ff7a5c);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add {
+    padding: 20px 15px;
+  }
+
+  .add form {
+    padding: 20px;
+  }
+
+  .add-category-price {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-img-upload img {
+    width: 100px;
+    height: 100px;
+  }
+}
